@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" preserve-order="false">
+    <parameter name="browserName" value="firefox"/>
+    <test verbose="2" preserve-order="false" name="E2E Scenario Login, Submit order successfully">
+        <classes>
+            <class name="testcases.Tc1_login">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc2_home">
+                <methods>
+                    <include name="getSelectedData"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc3_Cart">
+                <methods>
+                    <include name="enterCheckout"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc3_Cart">
+                <methods>
+                    <include name="enterCheckout"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc4_CheckoutStepOne">
+                <methods>
+                    <include name="fillCheckoutStepOne"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc05_CheckoutStepTwo">
+                <methods>
+                    <include name="submitOrder"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc2_home">
+                <methods>
+                    <include name="checkTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="false" name="E2E scenario, place order to checkout then return back to remove item from cart">
+        <classes>
+            <class name="testcases.Tc1_login">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc2_home">
+                <methods>
+                    <include name="getSelectedData"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc3_Cart">
+                <methods>
+                    <include name="enterCheckout"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc3_Cart">
+                <methods>
+                    <include name="enterCheckout"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc4_CheckoutStepOne">
+                <methods>
+                    <include name="fillCheckoutStepOne"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc05_CheckoutStepTwo">
+                <methods>
+                    <include name="returnBackToHome"/>
+                    <exclude name="submitOrder"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc2_home">
+                <methods>
+                    <include name="validateRemovingItemFromCart"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc3_Cart">
+                <methods>
+                    <include name="enterCheckout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--            <class name="testcases.Tc3_Cart">-->
+        <!--                <methods>-->
+        <!--                    <include name="enterCheckout"/>-->
+        <!--                </methods>-->
+        <!--            </class>-->
+        <!--            <class name="testcases.Tc4_CheckoutStepOne">-->
+        <!--                <methods>-->
+        <!--                    <include name="fillCheckoutStepOne"/>-->
+        <!--                </methods>-->
+        <!--            </class>-->
+        <!--            <class name="testcases.Tc05_CheckoutStepTwo">-->
+        <!--                <methods>-->
+        <!--                    <include name="submitOrder"/>-->
+        <!--                    <exclude name="returnBackToHome"/>-->
+        <!--                </methods>-->
+        <!--            </class>-->
